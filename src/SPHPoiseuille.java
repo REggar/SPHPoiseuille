@@ -33,7 +33,7 @@ public class SPHPoiseuille {
 		}
 
 		try {    
-			ImageIO.write(image, "jpg", new File("/home/boblert/"+iteration+".jpg"));   
+			ImageIO.write(image, "jpg", new File("/home/$USERNAME/"+iteration+".jpg"));   
 		} catch (IOException e) {    
 			e.printStackTrace();   
 		}  
