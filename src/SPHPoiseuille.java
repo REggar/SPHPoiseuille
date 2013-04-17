@@ -180,14 +180,6 @@ public class SPHPoiseuille {
 			if ((n+1)%IMAGE_N==0 || n==0) {
 				// Output ParaView file
 				SPHPoiseuille.paraview(particleList, n+1);
-				
-				String str = "";
-				for (int i = 0; i < len; i++) {
-					if(particleList.get(i).isDummy | !particleList.get(i).isHighlighted) continue;
-					str+="["+(particleList.get(i).x-0.75)+", "+particleList.get(i).v+"]"+", ";
-				}
-
-				System.out.println("plot([v(x, "+(n+1)*TIME_STEP+"), ["+removeLastChar(str)+"]], x = 0 .. 24, style = [line, point]);");
 			}
 		}
 
